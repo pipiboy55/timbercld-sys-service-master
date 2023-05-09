@@ -30,6 +30,7 @@
         <junit.version>4.13.2</junit.version>
         <jedis.version>2.9.0</jedis.version>
         <druid.version>1.2.17</druid.version>
+        <mybatis.version>3.5.13</mybatis.version>
         <mybatisplus.version>3.5.3.1</mybatisplus.version>
         <mysql.version>8.0.33</mysql.version>
         <sqlserver.version>4.0</sqlserver.version>
@@ -52,7 +53,7 @@
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
-            <version>3.5.13</version>
+            <version>${mybatis.version}</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
