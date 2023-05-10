@@ -47,4 +47,5 @@ public class ProductEntity extends BasicEntity {
 	private Integer status;
 
 	private String marks;
+
 }
