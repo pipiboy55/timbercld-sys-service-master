@@ -16,6 +16,11 @@ upload/
 ### VS Code###
 .vscode
 
+### File System
+.DS_Store
+upload/
+tree.txt
+
 ### STS ###
 .apt_generated
 .classpath
@@ -26,7 +31,7 @@ upload/
 .sts4-cache
 
 ### IntelliJ IDEA ###
-.idea/
+.idea
 *.iws
 *.iml
 *.ipr
