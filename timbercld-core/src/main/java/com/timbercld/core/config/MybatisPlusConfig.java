@@ -63,6 +63,7 @@ public class MybatisPlusConfig {
         // 设置最大单页限制数量，默认 500 条，-1 不受限制
         //paginationInnerInterceptor.setMaxLimit(500L);
 
+        interceptor.addInnerInterceptor(new DataFilterInterceptor());
 
         return interceptor;
     }

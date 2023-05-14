@@ -44,7 +44,7 @@ public @interface DataFilter {
     /**
      * 用户ID
      */
-    String userId() default "creator";
+    String userId() default "creator_id";
 
     /**
      * 部门ID

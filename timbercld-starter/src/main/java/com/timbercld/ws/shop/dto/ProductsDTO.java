@@ -35,4 +35,5 @@ public class ProductsDTO implements Serializable {
     private float productPrice;
     private String productIntro;
     private String productImg;
+    private String shopName;
 }
