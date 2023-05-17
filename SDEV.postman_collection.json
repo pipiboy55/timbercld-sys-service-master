@@ -10,7 +10,18 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": null
+				"url": {
+					"raw": "http://localhost:8088/timbercld/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"timbercld",
+						""
+					]
+				}
 			},
 			"response": []
 		},
@@ -19,25 +30,86 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": null
+				"url": {
+					"raw": "http://www.baidu.com/",
+					"protocol": "http",
+					"host": [
+						"www",
+						"baidu",
+						"com"
+					],
+					"path": [
+						""
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "captcha",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": null
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8088/timbercld/captcha?uuid=956cfb6a-47fc-4aa0-r0x3230-db0dc98b4153",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"timbercld",
+						"captcha"
+					],
+					"query": [
+						{
+							"key": "uuid",
+							"value": "956cfb6a-47fc-4aa0-r0x3230-db0dc98b4153"
+						}
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "login",
 			"request": {
-				"method": "GET",
-				"header": [],
-				"url": null
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json;charset=UTF-8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"bistu_admin\",\n    \"password\": \"123456\",\n    \"uuid\": \"956cfb6a-47fc-4aa0-r0x3230-db0dc98b4153\",\n    \"captcha\": \"tc8mx\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8088/timbercld/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"timbercld",
+						"login"
+					]
+				}
 			},
 			"response": []
 		},
@@ -45,17 +117,79 @@
 			"name": "nav",
 			"request": {
 				"method": "GET",
-				"header": [],
-				"url": null
+				"header": [
+					{
+						"key": "token",
+						"value": "58b9f069ff0c8eff6a7825e5e1fb2d61",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8088/timbercld/system/menu/nav?_t=1683600641579",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"timbercld",
+						"system",
+						"menu",
+						"nav"
+					],
+					"query": [
+						{
+							"key": "_t",
+							"value": "1683600641579"
+						}
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "user/info",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
-				"header": [],
-				"url": null
+				"header": [
+					{
+						"key": "token",
+						"value": "a25c6d12943e5d4c4abc40352bd2eac0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8088/timbercld/system/user/info?_t=1683600641657",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"timbercld",
+						"system",
+						"user",
+						"info"
+					],
+					"query": [
+						{
+							"key": "_t",
+							"value": "1683600641657"
+						}
+					]
+				}
 			},
 			"response": []
 		},
@@ -66,7 +200,7 @@
 				"header": [
 					{
 						"key": "token",
-						"value": "58b9f069ff0c8eff6a7825e5e1fb2d61",
+						"value": "6bc6fbf1b56c20340353109e52a5c7bb",
 						"type": "text"
 					},
 					{
@@ -85,7 +219,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8088/timbercld/shop/products/save",
+					"raw": "http://localhost:8088/timbercld/shop/products",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -94,8 +228,7 @@
 					"path": [
 						"timbercld",
 						"shop",
-						"products",
-						"save"
+						"products"
 					]
 				}
 			},
@@ -105,8 +238,28 @@
 			"name": "products/get",
 			"request": {
 				"method": "GET",
-				"header": [],
-				"url": null
+				"header": [
+					{
+						"key": "token",
+						"value": "52d747687d510e4c7df03814984fd203",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8088/timbercld/shop/products/get/1656140228412338177",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"timbercld",
+						"shop",
+						"products",
+						"get",
+						"1656140228412338177"
+					]
+				}
 			},
 			"response": []
 		},
@@ -114,8 +267,50 @@
 			"name": "products/page",
 			"request": {
 				"method": "GET",
-				"header": [],
-				"url": null
+				"header": [
+					{
+						"key": "token",
+						"value": "52d747687d510e4c7df03814984fd203",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;charset=UTF-8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8088/timbercld/shop/products/page?order=asc&orderField=&page=1&limit=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"timbercld",
+						"shop",
+						"products",
+						"page"
+					],
+					"query": [
+						{
+							"key": "order",
+							"value": "asc"
+						},
+						{
+							"key": "orderField",
+							"value": ""
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
 			},
 			"response": []
 		},
@@ -145,7 +340,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8088/timbercld/shop/order/save",
+					"raw": "http://localhost:8088/timbercld/shop/order",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -154,8 +349,7 @@
 					"path": [
 						"timbercld",
 						"shop",
-						"order",
-						"save"
+						"order"
 					]
 				}
 			},
@@ -165,8 +359,50 @@
 			"name": "order/page",
 			"request": {
 				"method": "GET",
-				"header": [],
-				"url": null
+				"header": [
+					{
+						"key": "token",
+						"value": "52d747687d510e4c7df03814984fd203",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;charset=UTF-8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8088/timbercld/shop/order/page?order=asc&orderField=&page=1&limit=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"timbercld",
+						"shop",
+						"order",
+						"page"
+					],
+					"query": [
+						{
+							"key": "order",
+							"value": "asc"
+						},
+						{
+							"key": "orderField",
+							"value": ""
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
 			},
 			"response": []
 		}
