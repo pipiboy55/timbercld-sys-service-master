@@ -1,6 +1,5 @@
 package com.timbercld.ws.shop.dto;
 
-import io.swagger.annotations.ApiModel;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -9,7 +8,7 @@ import java.util.Date;
 
 @Data
 @EqualsAndHashCode(callSuper = false)
-public class OrderDTO implements Serializable {
+public class CustomerDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -31,14 +30,32 @@ public class OrderDTO implements Serializable {
      */
     private Date updateDate;
 
-    private Long shopId;
-    private Long productsId;
-    private Long customerId;
-    private Integer quantity;
-    private Float amount;
-    private String comment;
-
-    private String shopName;
-    private String productsName;
-    private String customerName;
+    /**
+     * 用户名
+     */
+    private String username;
+    /**
+     * 密码
+     */
+    private String password;
+    /**
+     * 姓名
+     */
+    private String realName;
+    /**
+     * 头像
+     */
+    private String headUrl;
+    /**
+     * 性别   0：男   1：女    2：保密
+     */
+    private Integer gender;
+    /**
+     * 邮箱
+     */
+    private String email;
+    /**
+     * 手机号
+     */
+    private String mobile;
 }
