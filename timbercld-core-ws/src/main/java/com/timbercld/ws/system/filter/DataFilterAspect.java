@@ -58,7 +58,7 @@ public class DataFilterAspect {
         Object params = point.getArgs()[0];
         if(params instanceof Map){
             LoginUserDTO user = AuthorityUtils.getUser();
-            if(user.getSuperAdmin() == SuperAdminEnum.YES.value()) {
+            if(null == user && user.getSuperAdmin() == SuperAdminEnum.YES.value()) {
                 return ;
             }
             try {

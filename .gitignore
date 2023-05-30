@@ -11,14 +11,14 @@ target/
 
 ### MacOS ###
 .DS_Store
-upload/
+timbercld-starter/src/main/resources/static/upload/
 
 ### VS Code###
 .vscode
 
 ### File System
 .DS_Store
-upload/
+timbercld-starter/src/main/resources/static/upload/
 tree.txt
 
 ### STS ###

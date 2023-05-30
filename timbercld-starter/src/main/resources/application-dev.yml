@@ -53,7 +53,14 @@ spring:
         max-wait: -1ms      # 连接池最大阻塞等待时间（使用负值表示没有限制）
         max-idle: 10      # 连接池中的最大空闲连接
         min-idle: 5       # 连接池中的最小空闲连接
+  # Resources
+  mvc:
+    static-path-pattern=/**:
+#  web:
+#    resources:
+#      static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,./public/upload/
+
 timbercld:
   upload:
     basic-folder: ./upload/
-    basic-domain: http://localhost/
+    basic-domain: http://localhost:8088/
