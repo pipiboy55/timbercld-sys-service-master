@@ -12,6 +12,7 @@ target/
 ### MacOS ###
 .DS_Store
 timbercld-starter/src/main/resources/static/upload/
+/upload/
 
 ### VS Code###
 .vscode
